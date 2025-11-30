@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Temperature Converter</h2>
+
+        <div class="theme-toggle">
+            <span>&#9728;</span> <!-- Sun symbol -->
+            <label class="switch">
+                <input type="checkbox" id="themeSwitch">
+                <span class="slider"></span>
+            </label>
+            <span>&#127769;</span> <!-- Moon symbol -->
+        </div>
+
+        <div class="unit-buttons">
+            <button class="unit active" onclick="setUnit('celsius')">
+            <span class="unit-text">&#8451;</span> <!-- °C -->
+            </button>
+            <button class="unit" onclick="setUnit('fahrenheit')">
+            <span class="unit-text">&#8457;</span> <!-- °F -->
+            </button>
+            <button class="unit" onclick="setUnit('kelvin')">
+            <span class="unit-text">K</span> <!-- K -->
+            </button>
+        </div>
+
+        <input type="number" id="inputValue" placeholder="Enter value" oninput="convertTemp()">
+
+        <div class="result-box">
+            <p id="celsiusResult">Celsius: --</p>
+            <p id="fahrenheitResult">Fahrenheit: --</p>
+            <p id="kelvinResult">Kelvin: --</p>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
